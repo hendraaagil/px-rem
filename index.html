@@ -40,6 +40,14 @@
         }
       }
 
+      /* 
+        Unit rem pada media query belum disupport oleh browser safari < 15
+        https://github.com/tailwindlabs/tailwindcss/discussions/8378
+        https://zellwk.com/blog/media-query-units/
+        
+        Tailwind v4 akan menggunakan rem
+        https://github.com/tailwindlabs/tailwindcss/pull/13469
+      */
       @media (max-width: 20rem) {
         .rem {
           flex-direction: column;
