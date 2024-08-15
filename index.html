@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>px vs rem</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .px,
+      .rem {
+        margin: 8px;
+        padding: 8px;
+        display: flex;
+        gap: 8px;
+        border: 1px solid black;
+      }
+
+      .px p:last-child,
+      .rem p:last-child {
+        padding: 4px 8px;
+        background-color: lightgray;
+      }
+
+      .px {
+        font-size: 16px;
+      }
+
+      .rem {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 320px) {
+        .px {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 20rem) {
+        .rem {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="px">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+        aliquid minima, mollitia labore optio, voluptatibus iure porro ullam
+        excepturi architecto quidem culpa. Veniam repudiandae dolores ipsam hic.
+        Quod, est sit.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+        libero inventore adipisci, assumenda voluptates tempore! Id tenetur quos
+        beatae rem veritatis molestias dolorum earum repellat quod quae vitae,
+        aut eos.
+      </p>
+    </div>
+
+    <div class="rem">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+        aliquid minima, mollitia labore optio, voluptatibus iure porro ullam
+        excepturi architecto quidem culpa. Veniam repudiandae dolores ipsam hic.
+        Quod, est sit.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+        libero inventore adipisci, assumenda voluptates tempore! Id tenetur quos
+        beatae rem veritatis molestias dolorum earum repellat quod quae vitae,
+        aut eos.
+      </p>
+    </div>
+  </body>
+</html>
